@@ -5,6 +5,7 @@ namespace Momo\ZhuanDan;
 
 use Momo\ZhuanDan\Http\HttpServiceProvider;
 use Momo\ZhuanDan\Auth\AuthServiceProvider;
+use Momo\ZhuanDan\Model\Result;
 use Momo\ZhuanDan\Page\PageServiceProvider;
 
 /**
@@ -14,15 +15,19 @@ use Momo\ZhuanDan\Page\PageServiceProvider;
  */
 class Bot extends Foundation
 {
+    /**
+     * 注册组件
+     * @var string[]
+     */
     protected $providers = [
         HttpServiceProvider::class, #http客户端
-        AuthServiceProvider::class, #注册
+        AuthServiceProvider::class, #登录
         PageServiceProvider::class, #获取页面数据
     ];
 
     /**
      * 登录
-     * @return \Momo\ZhuanDan\Model\Result
+     * @return Result
      */
     public function login(){
         return $this->auth->login();
