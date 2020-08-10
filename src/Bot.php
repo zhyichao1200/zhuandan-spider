@@ -5,6 +5,7 @@ namespace Momo\ZhuanDan;
 
 use Momo\ZhuanDan\Http\HttpServiceProvider;
 use Momo\ZhuanDan\Auth\AuthServiceProvider;
+use Momo\ZhuanDan\Page\PageServiceProvider;
 
 /**
  * 转单宝机器人
@@ -16,6 +17,7 @@ class Bot extends Foundation
     protected $providers = [
         HttpServiceProvider::class,
         AuthServiceProvider::class,
+        PageServiceProvider::class,
     ];
 
     /**

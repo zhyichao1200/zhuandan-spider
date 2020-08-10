@@ -12,7 +12,8 @@
         "phpseclib/phpseclib": "^2.0",
         "pimple/pimple": "^3.3",
         "doctrine/cache": "^1.6",
-        "ext-json": "*"
+        "ext-json": "*",
+        "jaeger/querylist": "^4.2"
     },
     "autoload": {
         "psr-4": {
