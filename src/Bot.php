@@ -15,9 +15,9 @@ use Momo\ZhuanDan\Page\PageServiceProvider;
 class Bot extends Foundation
 {
     protected $providers = [
-        HttpServiceProvider::class,
-        AuthServiceProvider::class,
-        PageServiceProvider::class,
+        HttpServiceProvider::class, #http客户端
+        AuthServiceProvider::class, #注册
+        PageServiceProvider::class, #获取页面数据
     ];
 
     /**

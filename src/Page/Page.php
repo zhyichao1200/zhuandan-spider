@@ -6,6 +6,12 @@ namespace Momo\ZhuanDan\Page;
 use Momo\ZhuanDan\Http\Http;
 use QL\QueryList;
 use Momo\ZhuanDan\Model\Result;
+
+/**
+ * 页面数据
+ * Class Page
+ * @package Momo\ZhuanDan\Page
+ */
 class Page
 {
     /**
@@ -19,9 +25,7 @@ class Page
         $shopName = $ql->find("h3:eq(0) a:eq()")->text();
         $shopPic = $ql->find(".store_infos_pic a img")->attr('src');
         $res = new Result;
-        $res->setOk(true);
-        $res->setMessage("基本信息获取成功");
-        $res->setData(compact("shopName","shopPic"));
+        $res->setOk(true)->setMessage("基本信息获取成功")->setData(compact("shopName","shopPic"));
         return $res;
     }
 

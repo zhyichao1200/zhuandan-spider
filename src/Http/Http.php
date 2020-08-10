@@ -5,11 +5,20 @@ namespace Momo\ZhuanDan\Http;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\FileCookieJar;
+
+/**
+ * http客户端（单例）
+ * Class Http
+ * @package Momo\ZhuanDan\Http
+ */
 class Http
 {
     static $client;
 
-    public static function setClient($cookiePath)
+    /**
+     * @param string $cookiePath
+     */
+    public static function setClient(string $cookiePath)
     {
         $cookie = new FileCookieJar($cookiePath, true);
         static::$client = new Client([
@@ -22,6 +31,10 @@ class Http
             "base_uri"=> 'http://www.zhuandan.com',
         ]);
     }
+
+    /**
+     * @return Client
+     */
     public static function getClient() :Client
     {
         return static::$client;

@@ -4,6 +4,7 @@
 namespace Momo\ZhuanDan\Model;
 
 /**
+ * 返回实例
  * Class Result
  * @package Momo\ZhuanDan\Model
  */
