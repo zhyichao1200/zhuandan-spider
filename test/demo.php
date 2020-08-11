@@ -13,4 +13,4 @@ $bot = new Bot([
 $res = $bot->login();
 if(!$res->getOk()) throw new \Exception($res->getMessage());
 $page = $bot->page;
-var_dump($page->main());
+var_dump($page->toBeDelivered());

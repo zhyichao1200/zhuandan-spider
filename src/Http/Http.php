@@ -5,7 +5,7 @@ namespace Momo\ZhuanDan\Http;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\FileCookieJar;
-
+use Momo\ZhuanDan\Model\Base;
 /**
  * http客户端（单例）
  * Class Http
@@ -28,7 +28,7 @@ class Http
             'cookies' => $cookie,
             "verify"=>false,
             "http_errors"=>false,
-            "base_uri"=> 'http://www.zhuandan.com',
+            "base_uri"=> Base::URI,
         ]);
     }
 
